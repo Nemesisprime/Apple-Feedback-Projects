@@ -25,6 +25,12 @@ struct BrokenSwiftUIListSelectionApp: App {
                             Text("Using ID")
                         }
                     )
+                    NavigationLink(
+                        destination: ListWithNavigationSelectionView(),
+                        label: {
+                            Text("Using NavigationLink Tag/Selection")
+                        }
+                    )
                 }
                 .listStyle(SidebarListStyle())
                 Text(" - ")

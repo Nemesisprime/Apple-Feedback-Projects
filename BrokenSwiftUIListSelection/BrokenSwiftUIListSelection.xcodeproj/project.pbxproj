@@ -12,6 +12,7 @@
 		37162F7724A956020048B0F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37162F7624A956020048B0F7 /* Assets.xcassets */; };
 		37162F7A24A956020048B0F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37162F7924A956020048B0F7 /* Preview Assets.xcassets */; };
 		37162F8224A95AAB0048B0F7 /* ListViewWithID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37162F8124A95AAB0048B0F7 /* ListViewWithID.swift */; };
+		37162F8424AA23E20048B0F7 /* ListWithNavigationSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37162F8324AA23E20048B0F7 /* ListWithNavigationSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		37162F7924A956020048B0F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37162F7B24A956020048B0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37162F8124A95AAB0048B0F7 /* ListViewWithID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewWithID.swift; sourceTree = "<group>"; };
+		37162F8324AA23E20048B0F7 /* ListWithNavigationSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithNavigationSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				37162F7224A956000048B0F7 /* BrokenSwiftUIListSelectionApp.swift */,
 				37162F7424A956000048B0F7 /* ContentView.swift */,
 				37162F8124A95AAB0048B0F7 /* ListViewWithID.swift */,
+				37162F8324AA23E20048B0F7 /* ListWithNavigationSelection.swift */,
 				37162F7624A956020048B0F7 /* Assets.xcassets */,
 				37162F7B24A956020048B0F7 /* Info.plist */,
 				37162F7824A956020048B0F7 /* Preview Content */,
@@ -143,6 +146,7 @@
 			files = (
 				37162F7524A956000048B0F7 /* ContentView.swift in Sources */,
 				37162F8224A95AAB0048B0F7 /* ListViewWithID.swift in Sources */,
+				37162F8424AA23E20048B0F7 /* ListWithNavigationSelection.swift in Sources */,
 				37162F7324A956000048B0F7 /* BrokenSwiftUIListSelectionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
