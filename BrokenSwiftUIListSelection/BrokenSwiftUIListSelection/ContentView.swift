@@ -22,24 +22,52 @@ class ContentViewModel: ObservableObject {
     }
 }
 
+struct OuterView: View {
+    var body: some View {
+        NavigationView {
+            List {
+                NavigationLink(
+                    destination: ContentView(),
+                    label: {
+                        Text("Using Tags")
+                    }
+                )
+                NavigationLink(
+                    destination: ListViewWithIDView(),
+                    label: {
+                        Text("Using ID")
+                    }
+                )
+                NavigationLink(
+                    destination: ListWithNavigationSelectionView(),
+                    label: {
+                        Text("Using NavigationLink Tag/Selection")
+                    }
+                )
+            }
+            Text(" - ")
+        }
+    }
+}
+
 struct ContentView: View {
 
-    @StateObject var viewModel = ContentViewModel()
+    @ObservedObject var viewModel = ContentViewModel()
 
     var body: some View {
-        List(selection: $viewModel.selection)  {
-            NavigationLink(destination: Text("Detail")) {
-                Text("Line 0")
-            }.tag(0)
+            List(selection: $viewModel.selection)  {
+                NavigationLink(destination: Text("Detail")) {
+                    Text("Line 0")
+                }.tag(0)
 
-            NavigationLink(destination: Text("Detail")) {
-                Text("Line 1")
-            }.tag(1)
+                NavigationLink(destination: Text("Detail")) {
+                    Text("Line 1")
+                }.tag(1)
 
-            NavigationLink(destination: Text("Detail")) {
-                Text("Line 2")
-            }.tag(2)
-        }
+                NavigationLink(destination: Text("Detail")) {
+                    Text("Line 2")
+                }.tag(2)
+            }
     }
 }
 
