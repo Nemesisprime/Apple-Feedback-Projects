@@ -66,10 +66,12 @@ class TableCell: NSTableCellView {
         hasSetup = true
 
         self.addSubview(cellView)
-
-        cellView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        
+        cellView.translatesAutoresizingMaskIntoConstraints = false
+        cellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        cellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        cellView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+        cellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     }
 
     func configure(text: String) {
