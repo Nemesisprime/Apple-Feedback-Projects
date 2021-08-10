@@ -7,7 +7,6 @@
 
 import Cocoa
 import SwiftUI
-import SnapKit
 
 class ViewController: NSViewController {
 
@@ -86,13 +85,10 @@ struct TableCellView: View {
     var body: some View {
         VStack(alignment: .center) {
             Text("Text:")
-            Text("\(text)")
+            Text(text)
                 .lineLimit(nil)
-            // Without the fixedSize(...), text always truncates regardless of any modifiers. (Figure 1)
-            // However, adding fixedSize on a view inside of NSHostingView causes the Hosting View to report
-            // a size that doesn't match the View contained (Figure 2, Figure 3, Figure 4)
-                .fixedSize(horizontal: false, vertical: true)
-        }.frame(
+        }
+        .frame(
             maxWidth: .infinity
         )
         .padding()
