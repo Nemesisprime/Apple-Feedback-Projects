@@ -15,7 +15,7 @@ I think that this behavior can be replicated a few other ways, but here is the s
 - A toggle which emptys the list
 - Place a UIHostingController with any view content in the Secondary Column of the same UISplitViewController
 
-<img src="/Users/Dan/Developer/Xcode/Apple-Feedback-Projects/UIHostingView_Focus_Crash/readme.assets/Setup_Example.png" alt="A visual example of the UISplitViewController setup on iPad in landscape" style="zoom:50%;" />
+<img src="readme.assets/Setup_Example.png" alt="A visual example of the UISplitViewController setup on iPad in landscape" style="zoom:50%;" />
 
 ### How to replicate using sample project.
 
@@ -31,10 +31,10 @@ To cause the crash:
 
 5. The application crashes:
 
-    <img src="/Users/Dan/Developer/Xcode/Apple-Feedback-Projects/UIHostingView_Focus_Crash/readme.assets/Crash_Sample.png" alt="An example of the crash inside of UIHostingView._childFocusRegions(in:in:) " style="zoom:50%;" />
+    <img src="readme.assets/Crash_Sample.png" alt="An example of the crash inside of UIHostingView._childFocusRegions(in:in:) " style="zoom:50%;" />
 
    
 
  ### Example
 
-![UIHostingControllerCreash](/Users/Dan/Developer/Xcode/Apple-Feedback-Projects/UIHostingView_Focus_Crash/readme.assets/UIHostingControllerCreash.gif)
+![UIHostingControllerCreash](readme.assets/UIHostingControllerCreash.gif)
