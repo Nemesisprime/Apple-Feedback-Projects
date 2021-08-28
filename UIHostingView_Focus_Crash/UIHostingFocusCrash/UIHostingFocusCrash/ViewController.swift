@@ -30,9 +30,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let cellRegistration = UICollectionView.CellRegistration<TableCell, Item> { [weak self] (cell, indexPath, item) in
-            cell.parent = self
-            cell.configure(item.text)
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { [weak self] (cell, indexPath, item) in
+            var content = cell.defaultContentConfiguration()
+            content.text = item.text
+            cell.contentConfiguration = content
         }
         
         let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
@@ -58,62 +59,6 @@ class ViewController: UIViewController {
     
 }
 
-class TableCell: UICollectionViewListCell {
-    
-    private var hasSetup = false
-    
-    private lazy var cellView: UIHostingController = {
-        return UIHostingController<TableCellView>(rootView: TableCellView(text: ""))
-    }()
-    
-   public weak var parent: UIViewController?
-    
-    /**
-     Sets up da cell
-     */
-    private func setupCell() {
-        guard !hasSetup else { return }
-        hasSetup = true
-
-        self.addSubview(cellView.view)
-        
-        if let parent = parent {
-            parent.addChild(cellView)
-            cellView.didMove(toParent: parent)
-        }
-        
-        cellView.view.backgroundColor = .clear
-        cellView.view.translatesAutoresizingMaskIntoConstraints = false
-        cellView.view.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
-        cellView.view.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
-        cellView.view.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
-        cellView.view.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-    }
-    
-    func configure(_ text: String) {
-        setupCell()
-        
-        self.cellView.rootView.text = text
-    }
-}
-
-
-struct TableCellView: View {
-    var text: String
-
-    var body: some View {
-        VStack(alignment: .center) {
-            Text("Text:")
-            Text(text)
-                .lineLimit(nil)
-        }
-        .frame(
-            maxWidth: .infinity
-        )
-        .padding()
-    }
-}
-
 enum Section: CaseIterable {
     case main
 }
@@ -133,6 +78,6 @@ class YoloViewController: UIHostingController<YoloView> {
 
 struct YoloView: View {
     var body: some View {
-        Text("Yolo View")
+        Text("Empty SwiftUI View")
     }
 }
